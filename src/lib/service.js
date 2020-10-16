@@ -1,6 +1,7 @@
-import axios from "axios";
+import axios from 'axios';
 
-export const saveTodo = (todo) =>
-  axios.post("http://localhost:3030/api/todos", todo);
+export const saveTodo = (todo) => axios.post('/api/todos', todo);
 
-export const loadTodos = () => axios.get('/api/todos')
+export const loadTodos = () => axios.get('/api/todos');
+
+export const destroyTodo = (id) => axios.delete(`/api/todos/${id}`);
